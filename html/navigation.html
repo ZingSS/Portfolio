@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>院楼导路系统</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-grid.css">
+</head>
+<body class="project">
+<header>
+    <div class="project-return">
+        <a href="">
+            <img src="../image/logo.png"/>
+        </a>
+
+    </div>
+</header>
+<section class="project-detail">
+    <div class="container">
+        <div class="project-title">
+            院楼导路系统
+        </div>
+        <div class="project-subtitle">
+            快速找到房间
+        </div>
+        <div class="project-meta navigation">
+            <div class="col-md-6">
+                <h5>我的角色</h5>
+                <p>需求分析 <span>&</span> 交互设计 <span>&</span> 视觉设计 <span>&</span> 前端代码</p>
+            </div>
+            <div class="col-md-6">
+                <h5>使用方法</h5>
+                <p>用户访谈 <span>&</span> 人物角色 <span>&</span> 情景剧本 <span>&</span> 用户旅程</p>
+            </div>
+        </div>
+        <div class="project-markdown navigation">
+            <h3>这是什么</h3>
+            <p>这是一款为不熟悉院楼的人快速寻找房间设计的导路系统。</br>
+                新设计的院楼楼层结构复杂，会出现无法直达的情况（要去五楼的部分区域，需要坐电梯到四楼，然后通过不同的楼梯达到相应的五楼区域），而且分了若干区域，区域之间的划分不明确，所以对于不熟悉院楼的师生、外来人员，需要一个在大厅的系统可以指路。在系统空闲时，展示学院近期的讲座海报。</p>
+
+
+            <h3>阐述问题</h3>
+            <h4>故事板</h4>
+            <p>通过与需求方和确定需求，与用户进行沟通之后，我们发现，通过呈现出用户在没有导路系统的情况下寻找房间的行为，能够更好地展示用户遇到的难题和困惑，增加了开发人员的同理心。
+                再呈现有了院楼导路系统后，用户的行为是如何发生了改变，该系统如何帮助用户解决问题。</p>
+            <img src="../image/navigation-story.png"/>
+            <p>通过故事板，我们更加了解用户的行为习惯。但是，绘制用户旅程图更能让我们体会到在与系统接触、使用过程中，用户在想法、情绪上的变化。</p>
+
+            <h4>用户旅程</h4>
+            <p>用户旅程地图能帮助我们体会到用户在一般情景之下，使用系统之前、使用系统时、使用系统后想法与情绪上的变化，了解用户在不同阶段关心的事物。</p>
+            <img src="../image/navigation-map.png" />
+
+
+            <h3>交互设计</h3>
+            <p>在交互设计阶段，我们既要从对用户的研究中发现并解决痛点，同时也要满足客户方（即学院项目负责人）的需求，即展示学院讲座海报。同时，我们得知导路系统将会在一体机上展示，摆放在学院入口处，这也要求我们考虑用户和一体机之间交互的舒适度。</p>
+            <p>综合考虑上述三个因素，我们强调了导路入口的触发，将海报展示设置为默认页，并且将主要操作集中在适当高度与范围内。</p>
+            <img src="../image/navigation-ux01.png"/>
+
+            <h4>触发</h4>
+            <p>动态的触发按钮，引导用户进行操作。按照《微交互( <i>Microinteractions</i> )》一书中提到的触发器原则</p>
+            <blockquote>Make the trigger something the target users will recognize as a trigger in context. </blockquote>
+                <p>在首屏展示海报的前提下，将地图导路功能的入口触发器做了以下两层强调：</p>
+            <ol>
+                <li>选择了方形按钮加上路标 icon 进行标记，符合「导路」的上下文；</li>
+                <li>让路标 icon 上下跳动，在首屏中起到强烈的吸引作用，增强用户的认知，并且扩大按钮触发范围，减少用户操作负担。</li>
+            </ol>
+            <img src="../image/navigation-ux02.png" />
+            <h4>地图</h4>
+            <p>地图部分，分为不同楼层的展示与导路结果的展示。在楼层展示部分，使用地图堆叠的效果，加强与物理世界的映射。当点击楼层地图时，使用动态效果缩小其他楼层地图，加强楼层之间的映射关系。</p>
+            <img src="../image/navigation-ux03.png" />
+            <p>在导路结果部分，只显示需要走动的楼层，并提供楼层缩略图和路径提示，在复杂路径的情况下减轻用户的思考负担。在这里，有两个限制：院方提供的原始地图与导路系统的放置位置。<br/>
+            在导路系统中，最重要的就是让用户快速到达目标房间。与手机导航不同，导路系统的一体机处于固定的位置，这就意味着需要明确系统放置位置与用户朝向，让用户能够将系统内的指路结果与自身所处的物理世界快速对应。</p>
+            <img src="../image/navigation-ux04.png" />
+
+            <h3>反馈 & 修改</h3>
+            <p>因为是为院楼开发的产品，所以从开发到上线还需要学院的确认。其中有两个问题是在前期的需求确认与用户研究中没有发现的。</p>
+            <ol>
+                <li>因为是给院楼开发的产品，所以从开发到上线还需要学院领导的确认。其中主要有两个问题是在前期的需求确认与用户研究中没有发现的。</li>
+                <li>最初路径的显示是从一楼开始，乘坐电梯经过的层数也会显示。这是由于后台计算返回的最短路径的顺序是从一楼开始，并且依次按电梯楼层显示，这显然不符合用户的查看路径的习惯，在数据处理上偷懒了。被指出后，首先显示目标楼层（或者出电梯后的楼层，比如 4 楼到 5 楼需要走路，就首先显示 4 楼），并删去了电梯经过的楼层。符合指路习惯，比如：要去 5 楼 C 区的话，坐电梯到 4 楼，然后右拐直走到楼梯，往上走到 5 楼。</li>
+            </ol>
+
+            <h3>最终结果</h3>
+            <img src="../image/navigation-result.png"/>
+
+            <h3>反思 & 收获</h3>
+            <ol>
+                <li>
+                    限制的重要性。出现客户与用户不重合的情况时，除了倾听、讨论客户的需求，也需要注意客观上的限制（导路机位置）与主观上的限制（安全性问题）。在一开始，客户只会告诉你想要什么，不会想到需要禁止什么，需要主动进行挖掘。
+                </li>
+                <li>
+                    没有作出虚拟原型进行测试。因为导路设备需要订购，到项目后期才运进院楼，所以前期在测试时，使用的是大屏触摸屏电脑。在看了《用户体验草图设计》后，重新回顾这个项目，发现可以用纸板等「草图设备」模拟屏幕的位置与角度，以及用户所在的地点、朝向，对整个系统进行更准确的测试。
+                </li>
+            </ol>
+        </div>
+    </div>
+</section>
+<footer class="project-footer navigation">
+    <div class="project-other">
+        <div class="col-md-4 col-xs-12">
+            <a href=""><img src="../image/header-leasing.png"/></a>
+        </div>
+        <div class="col-md-4">
+            <a href=""><img src="../image/header-simaway.png"/></a>
+        </div>
+        <div class="col-md-4">
+            <a href=""><img src="../image/header-hellowork.png"/></a>
+        </div>
+        <div class="col-md-4">
+            <a href=""><img src="../image/header-xia.png"/></a>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>

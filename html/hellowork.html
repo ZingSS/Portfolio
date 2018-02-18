@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HelloWork</title>
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/bootstrap-grid.css">
+
+</head>
+<body class="project">
+    <header>
+        <div class="project-return">
+            <a href="">
+                <img src="../image/logo.png"/>
+            </a>
+
+        </div>
+    </header>
+    <section class="project-detail">
+        <div class="container">
+            <div class="project-title">
+                HelloWork
+            </div>
+            <div class="project-subtitle">
+                轻松作业轻松改
+            </div>
+            <div class="project-meta hellowork">
+                <div class="col-md-6 col-sm-12">
+                    <h5>我的角色</h5>
+                    <p>需求分析 <span>&</span> 交互设计 <span>&</span> 前端代码</p>
+                </div>
+                <div class="col-md-6 col-sm-12">
+                    <h5>使用方法</h5>
+                    <p>人物角色 <span>&</span> 情景剧本 <span>&</span> 快速迭代</p>
+                </div>
+            </div>
+            <div class="project-markdown">
+                <h3>这是什么</h3>
+                <p>这是一款为软件专业设计的课程、作业管理系统。<br/>
+                    学生可以在系统中查看自己的课程、相关的作业，提交作业并查看作业的成绩。助教可以下载作业，并登记成绩。教师可以发布作业，查看作业成绩的分布情况。</p>
+
+                <h3>阐述问题</h3>
+                <h4>故事板</h4>
+                <p>通过访谈，我们总结出人物角色和情景剧本，并以故事版的形式呈现。<br/>
+                    我们之所以总结出 Persona 并描述情景剧本，是因为这是一个与我们相关程度较大的产品。我们可能有各自的使用习惯，或是身兼学生和助教两个角色，但是缺少对作业流程的详细理解。包括助教与教师的日常习惯、心理活动等。</p>
+                <img src="../image/hellowork-story.jpg"/>
+                <p>通过故事板，我们对不同角色的目标有了更深的体会，对他们之间的交互行为也更加清楚。</p>
+                <h4>他们怎么说</h4>
+                <p>学生：
+                    <blockquote>有时候会错过布置的作业，想快速地知道布置了什么新的作业。<br/>
+                    就某个作业想要联系教师的时候，经常要再去找他们的邮箱地址。有时候会被告诉要去问助教，但是又不知道助教是谁。</blockquote>
+                </p>
+                <p>助教：
+                    <blockquote>想要更方便地下载学生的作业、登记成绩。<br/>
+                    有时候在批改下载好的作业时，没有网络，所以都是在 Excel 上登记成绩，最后集中发送给一个人上传。但是遇到要修改某几个学生的成绩就比较困难。</blockquote>
+                </p>
+                <p>教师：
+                <blockquote>助教批改完后，因为有时候会布置几个作业，所以使用通讯工具告知时，难以知道是哪个作业。<br/>
+                有时候无法直观地看到学生的成绩分布，不能了解学生的掌握情况。</blockquote>
+                </p>
+
+                <h3>分析 & 解决</h3>
+                <h4>作业状态</h4>
+                <p><b>痛点 > </b>在现有的系统中，学生和助教想知道作业状态和日期的时候，需要进入作业详情才能知道作业的截止日期、批改情况、是否公布分数。为了知道不同作业的情况，需要在几个页面中来回切换，很麻烦。</p>
+                <p><b>解决方式 > </b>使用卡片式，将学生、助教最关心的作业状态进行直接呈现。同时，出于学生对作业的关心程度之重，我们在传统的以课程为中心的基础上，增加了 <i>以作业为中心</i> 的信息结构。对不同课程的作业布置情况，一目了然。</p>
+                <img src="../image/hellowork-01.png"/>
+
+                <h4>通知</h4>
+                <p><b>痛点 > </b><br/>
+                    1. 对学生而言，不知道教师什么时候会布置作业，有时候教师只是在课上告知要布置作业，但是可能一段时间后再布置，那时候学生可能已经遗忘了；<br/>
+                    2. 对助教而言，不知道什么时候可以批改作业；<br/>
+                    3. 对教师而言，不知道助教批改好的作业是指哪个作业。</p>
+                <p><b>解决方式 > </b><br/>
+                    1. 邮件通知：这是基于我们系统的特点，即学生邮箱作为账号登录。所以在触发不同的行为时，使用邮件对目标进行通知，同时附上作业链接，在阅读邮件时可以直接打开；<br/>
+                    2. 系统内通知：作业成绩公布。比起作业布置时的通知，学生对于成绩发布的时间更不敏感，所以可以仅在系统内进行通知。</p>
+                <img src="../image/hellowork-02.png"/>
+
+                <h4>批量下载 & 成绩上传</h4>
+                <p><b>痛点 > </b><br/>
+                    1. 一个课程的助教不止一位，他们会讨论分工后，对作业进行批改，如果能按助教之间的分工批量下载作业，会更加方便；<br/>
+                    2. 不同的助教之间批改作业的进度不同，无法灵活登记成绩。<br/>
+                <p><b>解决方式 > </b><br/>
+                    1. 增加批量下载；<br/>
+                    2. 可交互的表格和可导出/导入的成绩，方便助教各自上传成绩、线下批改、线上修改成绩，满足不同场景的需要。</p>
+                <img src="../image/hellowork-03.png"/>
+
+                <h4>统计成绩</h4>
+                <p><b>痛点 > </b>教师在查看助教批改完的作业时，无法直观地看到成绩分布，不能直观地了解学生对该项作业的完成情况，或者助教的批改情况。</p>
+                <p><b>解决方式 > </b>使用可交互图表，可以查看不同区间的成绩分布情况，可以方便查看高分段同学，以进行课堂演示，也可以查看低分段同学，进行提醒。</p>
+                <img src="../image/hellowork-04.png"/>
+
+                <h3>最终结果</h3>
+                <img src="../image/hellowork-05.png"/>
+
+                <h3>反思 & 收获</h3>
+                <ol>
+                    <li>
+                        在写情景剧本的时候，一开始写入了很多界面交互细节，包括人物使用了某个页面上的某个按钮、然后跳转到另一个页面，考虑了工程上的业务逻辑。被老师指出后，在重新写故事板时，从角色入手，考虑了他们所处的情景，摆脱了为系统功能服务的想法，转换成以用户为中心。
+                    </li>
+                    <li>
+                        了解编码量和截止日期对交互的影响。作为组内的交互和前端，必须权衡设计和代码，因为实现的难度而舍弃一些想法，同时寻找替代的解决方法。比如作业的展示部分，增加日历更加一目了然，但花费时间更多，只能以颜色、顺序加以区分。
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </section>
+    <footer class="project-footer">
+        <div class="project-other">
+            <div class="col-md-4 col-xs-12">
+                <a href=""><img src="../image/header-leasing.png"/></a>
+            </div>
+            <div class="col-md-4">
+                <a href=""><img src="../image/header-simaway.png"/></a>
+            </div>
+            <div class="col-md-4">
+                <a href=""><img src="../image/header-navigation.png"/></a>
+            </div>
+            <div class="col-md-4">
+                <a href=""><img src="../image/header-xia.png"/></a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

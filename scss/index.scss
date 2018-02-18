@@ -1,0 +1,303 @@
+$title-height: 10rem;
+$logo-size: 100px;
+$project-width: 50rem;
+
+//$color:
+
+$portfolio-color: #00AA63;
+$box-color: #e2e2e2;
+
+$hellowork-color: rgb(118, 162, 215);
+$navigation-color: #65BF7D;
+$xia-color: #FF605C;
+$leasing-color: #FFB02E;
+
+$font-color: #4a4a4a;
+$font-sub-color: #9a9a9a;
+
+body {
+  max-width: 80rem;
+  margin: 0 auto;
+  color: $font-color;
+  //font-size: 62.5%;
+}
+
+p {
+  //font-size: 1.2rem;
+}
+
+
+header {
+
+  overflow: hidden;
+
+  #title-container {
+    max-height: $title-height;
+    height: $title-height;
+  }
+
+  #index-logo {
+
+    margin-left: auto;
+    margin-right: auto;
+    max-width: $logo-size;
+    text-align: center;
+    margin-top: 60px;
+    position: relative;
+
+
+    img {
+      height: $logo-size;
+      width: $logo-size;
+    }
+  }
+}
+
+
+#menu {
+
+  max-width: 25rem;
+  margin: 0 auto;
+
+
+  ul {
+    list-style: none;
+    border: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+
+  li {
+    display: inline-block;
+    width: 24%;
+    text-align: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: $portfolio-color;
+    font-weight: 300;
+    font-size: 1.1rem;
+  }
+}
+
+
+#main-content {
+
+  margin-top: 70px;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+
+  .project-box {
+
+    border-radius: 7px;
+    border: 1px $box-color solid;
+    overflow: hidden;
+
+    margin: 0 0 3rem 0;
+
+    img {
+      width: 100%;
+    }
+
+  }
+
+  .box-description {
+    margin: 6px 20px 10px;
+  }
+
+  .box-name {
+    display: block;
+    font-size: 0.9rem;
+  }
+
+  .box-role {
+    font-size: 0.3rem;
+    color: $font-sub-color;
+  }
+}
+
+
+footer {
+
+  width: 80%;
+
+  margin: 2rem auto;
+  padding: 1rem 0 0;
+
+  border-top: 1px solid rgba($portfolio-color,.3);
+}
+
+.home-footer {
+
+  span {
+    color: $font-sub-color;
+    font-size: 0.9rem;
+  }
+}
+
+// project
+
+.project-return {
+  height: 3rem;
+  margin: 1rem;
+
+  img {
+    height: 100%;
+  }
+}
+
+.project-detail {
+  max-width: $project-width;
+  margin: 0 auto;
+
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+}
+
+.project-title {
+  width: 100%;
+  text-align: center;
+  font-weight: 400;
+  font-size: 3rem;
+}
+.project-subtitle {
+  width: 100%;
+  text-align: center;
+  color: $font-sub-color;
+  font-weight: 300;
+}
+
+.project-meta {
+  border: 1px solid #9a9a9a;
+  border-radius: 5px;
+
+  margin: 3rem 0;
+  padding: 1.2rem 0;
+  text-align: center;
+  display: flex;
+
+  h5 {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    font-weight: 200;
+    font-size: 0.83rem;
+  }
+
+  span {
+    font-size: 0.2rem;
+  }
+}
+
+
+.project-markdown {
+
+  p, li {
+    line-height: 1.7em;
+    font-weight: 300;
+  }
+
+  ol {
+    padding-left: 1rem;
+  }
+
+  li {
+    padding-left: 0.5rem;
+    margin-bottom: 0.8rem;
+  }
+
+  h3 {
+    margin-top: 3.5rem;
+    font-weight: 300;
+  }
+
+  h4 {
+    margin-top: 2rem;
+    font-weight: 400;
+  }
+
+  h5 {
+    margin-bottom: 1rem;
+  }
+
+  img {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  blockquote {
+    border-left: 2px solid $hellowork-color;
+    margin: 0;
+    padding: 0.3rem 0 0.3rem 1.5rem;
+    line-height: 2rem;
+    font-size: 0.9rem;
+  }
+
+  b {
+    font-size: 0.83rem;
+  }
+}
+
+.project-footer {
+  max-width: $project-width;
+  border-top: 1px solid rgba($hellowork-color, .5);
+  margin-top: 3rem;
+  padding: 2rem 1rem;
+}
+
+.project-other {
+  display: flex;
+  flex-wrap: wrap;
+
+  img {
+    width: 100%;
+  }
+
+  div {
+    margin-bottom: 1rem;
+  }
+}
+
+
+#xiachufang {
+
+  img {
+    border: 1px solid rgba($xia-color,.5);
+    border-radius: 5px;
+
+    margin: 10px 0;
+  }
+}
+
+
+.hellowork {
+  border-color: rgba($hellowork-color,.5);
+}
+
+.navigation {
+  border-color: rgba($navigation-color,.5);
+
+  blockquote {
+    border-color: $navigation-color;
+  }
+}
+
+.leasing {
+  border-color: rgba($leasing-color,.5);
+}
+
+.xia {
+  border-color: rgba($xia-color,.5);
+
+  h4 {
+    color: $xia-color;
+    text-align: center;
+  }
+}
